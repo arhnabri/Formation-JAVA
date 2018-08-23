@@ -1,27 +1,12 @@
-/**
- * (C) Copyright 2017 FranceAgriMer (http://www.franceagrimer.fr). FranceAgriMer, Établissement National des
- * Produits de l’Agriculture et de la Mer. Tout ou partie du présent code ne peut être copié et/ou distribué sans
- * l'accord formel de FranceAgriMer.
- */
 package com.gildedrose;
 
-// ***************************************************************************
-// Copyright (c) 2016, Industrial Logic, Inc., All Rights Reserved.
-//
-// This code is the exclusive property of Industrial Logic, Inc. It may ONLY be
-// used by students during Industrial Logic's workshops or by individuals
-// who are being coached by Industrial Logic on a project.
-//
-// This code may NOT be copied or used for any other purpose without the prior
-// written consent of Industrial Logic, Inc.
-// ****************************************************************************
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 public class GildedRoseTest {
     final String expected =
