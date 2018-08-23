@@ -9,11 +9,8 @@ public final class BigDecimalFactory {
 	}
 	
 	public static BigDecimal creerBigDecimal(final String value) {
-		try {
-			return new BigDecimal(value);
-		} catch (NumberFormatException e) {
-			throw new UnsupportedOperationException("operation non valide");
-		}
+		// dans le cas où la valeur en entrée n'est pas en entier renvoyer une UnsupportedOperationException
+		return null;
 	}
 
 }
