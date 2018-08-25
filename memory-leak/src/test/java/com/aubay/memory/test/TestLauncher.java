@@ -12,56 +12,6 @@ import java.nio.charset.StandardCharsets;
 import org.junit.jupiter.api.Test;
 
 public class TestLauncher {
-
-	@Test
-	public void testSansErreur() throws IOException, URISyntaxException {
-
-		final StringBuilder str = new StringBuilder();
-		System.out.println("mon fichier1");
-		final URLConnection conn = this.getClass().getClassLoader().getResource("fichier1.txt").openConnection();;
-		try (InputStreamReader is = new InputStreamReader(conn.getInputStream(), StandardCharsets.UTF_8); BufferedReader br = new BufferedReader(is)){
-			String val = "";
-			while ((val = br.readLine()) != null) {
-				str.append(val);
-			}
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-
-		System.out.println("mon fichier2");
-		URLConnection conn2 = this.getClass().getClassLoader().getResource("fichier2.txt").openConnection();;
-		try (InputStreamReader is = new InputStreamReader(conn2.getInputStream(), StandardCharsets.UTF_8); BufferedReader br = new BufferedReader(is)){
-			String val = "";
-			while ((val = br.readLine()) != null) {
-				str.append(val);
-			}
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-
-		System.out.println("mon fichier3");
-		URLConnection conn3 = this.getClass().getClassLoader().getResource("fichier3.txt").openConnection();;
-		try (InputStreamReader is = new InputStreamReader(conn3.getInputStream(), StandardCharsets.UTF_8); BufferedReader br = new BufferedReader(is)){
-			String val = "";
-			while ((val = br.readLine()) != null) {
-				str.append(val);
-			}
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-
-		System.out.println("mon fichier4");
-		URLConnection conn4 = this.getClass().getClassLoader().getResource("fichier4.txt").openConnection();;
-		try (InputStreamReader is = new InputStreamReader(conn4.getInputStream(), StandardCharsets.UTF_8); BufferedReader br = new BufferedReader(is)){
-			String val = "";
-			while ((val = br.readLine()) != null) {
-				str.append(val);
-			}
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-
-	}
 	
 	@Test
 	public void testThrowOutOfMemory() throws IOException, URISyntaxException {
