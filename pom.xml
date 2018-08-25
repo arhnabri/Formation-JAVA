@@ -10,7 +10,7 @@
 	<description>Projet parent </description>
 
 	<properties>
-		<java.version>8</java.version>
+		<java.version>1.8</java.version>
 	</properties>
 
 	<build>
@@ -21,7 +21,8 @@
 					<artifactId>maven-compiler-plugin</artifactId>
 					<version>3.8.0</version>
 					<configuration>
-						<release>${java.version}</release>
+						<source>${java.version}</source>
+						<target>${java.version}</target>
 					</configuration>
 				</plugin>
 				<plugin>
@@ -69,7 +70,8 @@
 	</dependencyManagement>
 
 	<modules>
-		<module>guilded-rose</module>
 		<module>poo</module>
+		<module>memory-leak</module>
+		<module>java-functionnal</module>
 	</modules>
 </project>
