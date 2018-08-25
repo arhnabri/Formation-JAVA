@@ -70,6 +70,7 @@
 	</dependencyManagement>
 
 	<modules>
+		<module>guilded-rose</module>
 		<module>poo</module>
 		<module>memory-leak</module>
 		<module>java-functionnal</module>
