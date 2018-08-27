@@ -7,10 +7,10 @@
 		<artifactId>formation</artifactId>
 		<version>1.0.0-SNAPSHOT</version>
 	</parent>
-	<artifactId>java-functionnal</artifactId>
-	<name>functionnal dev</name>
+	<artifactId>java-seven</artifactId>
+	<name>Java 7</name>
 	<packaging>jar</packaging>
-	<description>Exercices pour gérer les fuites mémoires </description>
+	<description>Exercices pour les nouveautés Java 7</description>
 
 	<dependencies>
 		<dependency>
@@ -24,6 +24,14 @@
 		<dependency>
 			<groupId>org.junit.platform</groupId>
 			<artifactId>junit-platform-launcher</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.poi</groupId>
+			<artifactId>poi</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.poi</groupId>
+			<artifactId>poi-ooxml</artifactId>
 		</dependency>
 	</dependencies>
 </project>

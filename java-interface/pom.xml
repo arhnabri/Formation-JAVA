@@ -7,10 +7,10 @@
 		<artifactId>formation</artifactId>
 		<version>1.0.0-SNAPSHOT</version>
 	</parent>
-	<artifactId>java-functionnal</artifactId>
-	<name>functionnal dev</name>
+	<artifactId>java-interface</artifactId>
+	<name>default interface methode</name>
 	<packaging>jar</packaging>
-	<description>Exercices pour gérer les fuites mémoires </description>
+	<description>Exercices pour gérer interfaces</description>
 
 	<dependencies>
 		<dependency>
