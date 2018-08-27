@@ -93,6 +93,54 @@ Pour lancer les tests faites la commande <strong>mvn test</strong>.</p>
 <p><strong>BON COURAGE :)</strong></p>
 </div>
 
+ <li style="font-size: 40px;">  <b>Thème 3 : Introduction à java 7 ‒ Exercice : Développons en Java 7</b>
+<div style="font-size: 20px;">
+<h1 id="exercicesurjava7">Exercice sur Java 7</h1>
+
+<p>L'idée de cet exercice est la classe à l'aide du scénario fournit.</p>
+
+<h1 id="projet">Projet</h1>
+
+<p>Vous devez juste compléter la classe TestLauncher !</p>
+
+<h2 id="explication">Explication</h2>
+
+<p>Dans le répertoire src/main/resources vous allez retrouver un fichier exemple.xlsx.
+En premier, vous devez utiliser la classe Path afin de charger le fichier.
+Puis vous devez lire le fichier à l'aide de Poi.
+Pour cela ouvrez le fichier avec POI puis utilisez les iterators pour lire le fichier : </p>
+
+<ul>
+<li>workbook.sheetIterator() lit les pages</li>
+
+<li>sheet.rowIterator() lit une ligne</li>
+
+<li>row.cellIterator() lit les cellules.</li>
+</ul>
+
+<p>Vous devez ensuite à partir d'une ligne du fichier excel créer une Personne.
+Dans la première colonne du fichier excel les valeurs possibles sont :</p>
+
+<ul>
+<li>"H" il faut créer un objet de type Homme</li>
+
+<li>"F" il faut créer un objet de type Femme</li>
+</ul>
+
+<p>La dernière colonne est une date. Pour la mettre au bon format il faut utiliser la méthode <strong>convertDate</strong> présente dans la classe Personne.
+Puis enfin vous devez parcourir la liste de personne et imprimer à l'aide de la méthode <strong>toString</strong> le résultat.</p>
+
+<h2 id="conseil">Conseil</h2>
+
+<p>Pour lire le fichier vous devez utiliser <strong>new XSSFWorkbook(is)</strong> qui prend en paramètre un InputStream.
+Pour lire une date en POI vous pouvez utilisez l'instruction suivante : 
+if (HSSFDateUtil.isCellDateFormatted(cell)) {
+    cell.getDateCellValue();
+}</p>
+
+<p><strong>BON COURAGE :)</strong></p>
+</div>
+</li>
 
         <li style="font-size: 40px;">  <b>Thème 4 : La programation fonctionnelle ‒ Exercice : Introduction</b>
 <div style="font-size: 20px;">
@@ -126,6 +174,61 @@ Les classes de Comparator sont-elles vraiment utiles ?</p>
 </div>
 </li>
 
+<li style="font-size: 40px;">  <b>Thème 4 : La programation java 8 ‒ Exercice : Les interfaces</b>
+<div style="font-size: 20px;">
+<h1 id="exercicesurlesinterfacesjava">Exercice sur les interfaces Java</h1>
+
+<p>L'idée de cet exercice est de d'implémenter la méthode <strong>description</strong> afin de respecter le test unitaire contenu dans la classe TestLauncher .</p>
+
+<h1 id="projet">Projet</h1>
+
+<p>Vous devez modifier que les 3 interfaces fournies :</p>
+
+<ul>
+<li>IFemme</li>
+
+<li>IHomme</li>
+
+<li>IHumain</li>
+</ul>
+
+<h2 id="explication">Explication</h2>
+
+<p>Dans le fichier TestLauncher.java vous trouverez le code que l'on souhaite obtenir.</p>
+
+<p><strong>BON COURAGE :)</strong></p>
+</div>
+</li>
+
+<li style="font-size: 40px;">  <b>Thème 4 : La programation java 8 ‒ Exercice : Les dates</b>
+<div style="font-size: 20px;">
+<h1 id="exercicesurlesdates">Exercice sur les dates</h1>
+
+<p>L'idée de cet exercice est de compléter les demandes faites dans la classe TestLauncher.</p>
+
+<h1 id="projet">Projet</h1>
+
+<p>Vous devez juste compléter la classe TestLauncher !</p>
+
+<h2 id="explication">Explication</h2>
+
+<p>Dans le fichier TestLauncher.java vous trouverez le code que l'on souhaite réaliser.
+Les instructions sont indiquées en commentaire dans la classe : 
+Exemple : </p>
+
+<ul>
+<li>// afficher la date du 27/08/2018 sous ce format.</li>
+
+<li>// trouver le premier jour du mois d'aout 2018</li>
+</ul>
+
+<h2 id="conseil">Conseil</h2>
+
+<p>On ne doit utiliser que la nouvelle API Date !</p>
+
+<p><strong>BON COURAGE :)</strong></p>
+</div>
+</li>
 
 </ul>
 </body>

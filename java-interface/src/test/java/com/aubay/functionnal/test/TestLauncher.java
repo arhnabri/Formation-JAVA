@@ -4,9 +4,6 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import org.junit.jupiter.api.Test;
 
-import com.aubay.interfaces.apres.Femme;
-import com.aubay.interfaces.apres.Homme;
-
 public class TestLauncher {
 
 	private static final String REPONSE_HOMME = "je suis un humain;\nJe suis un homme;";
@@ -15,14 +12,14 @@ public class TestLauncher {
 
 	@Test
 	public void testInterfaceHomme() {
-		String reponse = new Homme().description();
-		assertEquals(REPONSE_HOMME, reponse);
+		//String reponse = new Homme().description();
+		assertEquals(REPONSE_HOMME, "");
 	}
 
 	@Test
 	public void testInterfaceFemme() {
-		String reponse = new Femme().description();
-		assertEquals(REPONSE_FEMME, reponse);
+		//String reponse = new Femme().description();
+		assertEquals(REPONSE_FEMME, "");
 	}
 
 }
