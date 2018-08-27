@@ -24,7 +24,7 @@ public class TestLauncher {
 			while ((val = br.readLine()) != null) {
 				str.append(val);
 			}
-		} catch (Exception e) {
+		} catch (IOException e) {
 			e.printStackTrace();
 		}
 
@@ -35,7 +35,7 @@ public class TestLauncher {
 			while ((val = br.readLine()) != null) {
 				str.append(val);
 			}
-		} catch (Exception e) {
+		} catch (IOException e) {
 			e.printStackTrace();
 		}
 
@@ -46,7 +46,7 @@ public class TestLauncher {
 			while ((val = br.readLine()) != null) {
 				str.append(val);
 			}
-		} catch (Exception e) {
+		} catch (IOException e) {
 			e.printStackTrace();
 		}
 
@@ -57,7 +57,7 @@ public class TestLauncher {
 			while ((val = br.readLine()) != null) {
 				str.append(val);
 			}
-		} catch (Exception e) {
+		} catch (IOException e) {
 			e.printStackTrace();
 		}
 
