@@ -40,6 +40,10 @@ N'hésitez pas à apporter des modifications à la méthode *UpdateQuality*  et 
 Cela ne vous empêche pas d'avoir votre propre représentation des objets à manipuler.
 Vous trouverez une classe *ItemFactory* (à implémenter) prenant en paramètre un *Item* et retournant un objet *AbstractItem* (à implémenter également) qui sera à étendre par vos objets.
 
+Utiliser **EclEmma** pour vérifier que vos tests couvrent tout le code.
+
+Attention, ne pas oublier le comportement par default lorsque le nom de l'objet ne correspond pas à l'un des 4 cités.
+
 Clarification: un article ne peut jamais avoir sa qualité supérieure à 50, cependant *Sulfuras* est un objet légendaire et sa qualité est de 80 et ne change jamais.
 
 **BON COURAGE :)**
