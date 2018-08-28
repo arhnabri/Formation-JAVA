@@ -3,7 +3,7 @@ L'idée de cet exercice est de d'implémenter la méthode **description** afin d
 
 # Projet
 
-Vous devez modifier que les 3 interfaces fournies :
+Vous ne devez modifier que les 3 interfaces fournies :
 - IFemme
 - IHomme
 - IHumain
