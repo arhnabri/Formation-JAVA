@@ -7,6 +7,9 @@ import java.io.PrintStream;
 
 import org.junit.jupiter.api.Test;
 
+import com.gildedrose.Item;
+import com.gildedrose.GildedRose;
+
 public class GildedRoseTest {
     final String expected =
         "OMGHAI!\n" + "-------- day 0 --------\n" + "name, sellIn, quality\n" + "+5 Dexterity Vest, 10, 20\n"
