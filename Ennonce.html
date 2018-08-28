@@ -230,6 +230,88 @@ Exemple : </p>
 </div>
 </li>
 
+<li style="font-size: 40px;">  <b>Thème 5 : Les bonnes pratiques ‒ Exercice : Refactoring - Guilded Rose</b>
+<div style="font-size: 20px;">
+
+<h1 id="exercicederefactoringguildedrose">Exercice de refactoring: Guilded Rose</h1>
+
+<p>L'idée de cet exercice est de:</p>
+
+<ul>
+<li>réaliser des <strong>tests unitaires</strong> couvrant la totalité d'un code existant</li>
+
+<li><strong>refactorer</strong> le code en utilisant la <strong>POO</strong></li>
+
+<li>ajouter une <strong>nouvelle fonctionnalité</strong> </li>
+</ul>
+
+<h1 id="projet">Projet</h1>
+
+<p>Le code source à refactorer est fourni dans les classes <strong>GuildedRose</strong> et <strong>Item</strong>.
+La classe de test à compléter est dans la classe <strong>GildedRoseFixmeTest</strong>.</p>
+
+<h1 id="explication">Explication</h1>
+
+<p>Bienvenue à Gilded Rose, une petite auberge dans un emplacement privilégié dans une ville importante dirigée par un aubergiste sympathique nommé Allison. Nous achetons et vendons également uniquement les meilleurs produits. Malheureusement, nos produits se dégradent constamment en termes de qualité à l'approche de leur date de péremption. Nous avons un système en place qui met à jour notre inventaire pour nous. Il a été développé par un type sans prétention nommé Leeroy, qui a évolué vers de nouvelles aventures. Votre tâche consiste à ajouter une nouvelle fonctionnalité à notre système afin que nous puissions commencer à vendre une nouvelle catégorie d’articles. Tout d'abord une introduction à notre système:</p>
+
+<ul>
+<li>Tous les articles ont une valeur <em>SellIn</em> qui indique le nombre de jours pendant lesquels nous devons vendre l'article</li>
+
+<li>Tous les articles ont une valeur <em>Quality</em> qui indique la valeur de l'article</li>
+
+<li>À la fin de chaque journée, notre système décrémente les deux valeurs pour chaque article</li>
+</ul>
+
+<p>Assez simple, non ? Eh bien, c'est là que ça devient intéressant:</p>
+
+<ul>
+<li>Une fois la date de péremption écoulée, la qualité se dégrade deux fois plus vite</li>
+
+<li>La <em>Quality</em> d'un objet n'est jamais négative</li>
+
+<li>Plus <em>AgedBrie</em> vieillit plus il augmente en qualité</li>
+
+<li>La <em>Quality</em> d'un objet n'est jamais supérieure à 50</li>
+
+<li><em>Sulfuras</em>, étant un objet légendaire, ne doit jamais être vendu ou diminuer en qualité</li>
+
+<li><em>Backstage Pass</em>, comme <em>AgedBrie</em>, augmente la <em>Quality</em> à mesure que sa valeur <em>SellIn</em> approche: la qualité augmente de 2 quand il y a 10 jours ou moins et de 3 quand il y a 5 jours ou moins mais la qualité tombe à 0 après le concert</li>
+</ul>
+
+<h2 id="objectif">Objectif</h2>
+
+<p>Nous avons récemment signé un fournisseur d'articles <em>Conjured</em>. Cela nécessite une mise à jour de notre système:</p>
+
+<ul>
+<li>Les éléments <em>Conjured</em> se dégradent en qualité deux fois plus vite que les objets normaux</li>
+</ul>
+
+<h2 id="rgles">Règles</h2>
+
+<p>La réalisation de cet exercice se fera en 3 étapes:</p>
+
+<ul>
+<li>Ecriture des tests unitaires</li>
+
+<li>Refactoring du code en POO dans l'optique de rajouter simplement un nouvel objet</li>
+
+<li>L'ajout d'un nouvel objet <em>Conjured</em></li>
+</ul>
+
+<h2 id="conseils">Conseils</h2>
+
+<p>N'hésitez pas à apporter des modifications à la méthode <em>UpdateQuality</em>  et à changer complètement le code tant que tout fonctionne correctement. Cependant, <strong>ne modifiez pas</strong> la classe <em>Item</em> ni la signature du constructeur de <em>GuildedRose</em> (<em>Item[] items</em>), car celles-ci appartiennent au gobelin situé dans le coin qui passera immédiatement en mode berserk et vous assommera, ou pire...</p>
+
+<p>Cela ne vous empêche pas d'avoir votre propre représentation des objets à manipuler.
+Vous trouverez une classe <em>ItemFactory</em> (à implémenter) prenant en paramètre un <em>Item</em> et retournant un objet <em>AbstractItem</em> (à implémenter également) qui sera à étendre par vos objets.</p>
+
+<p>Clarification: un article ne peut jamais avoir sa qualité supérieure à 50, cependant <em>Sulfuras</em> est un objet légendaire et sa qualité est de 80 et ne change jamais.</p>
+
+<p><strong>BON COURAGE :)</strong></p>
+
+</div>
+</li>
+
 </ul>
 </body>
 
