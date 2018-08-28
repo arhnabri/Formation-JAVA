@@ -3,7 +3,7 @@ L'idée de cet exercice est de comprendre et de corriger le test unitaire qui fa
 
 # Projet
 
-Le squelette du projet est fourni : vous devez compléter la méthode **testSansErreur** !
+Le squelette du projet est fourni : vous devez créer la méthode **testSansErreur** !
 
 ## Explication
 Dans le fichier TestLauncher.java vous trouverez la méthode **testThrowOutOfMemory**.

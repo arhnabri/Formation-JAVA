@@ -1,3 +1,4 @@
+
 # Exercice de refactoring: Guilded Rose
 L'idée de cet exercice est de:
  - réaliser des **tests unitaires** couvrant la totalité d'un code existant
@@ -9,7 +10,7 @@ Le code source à refactorer est fourni dans les classes **GuildedRose** et **It
 La classe de test à compléter est dans la classe **GildedRoseFixmeTest**.
 
 # Explication
-Bienvenue à Gilded Rose, une petite auberge dans un emplacement privilégié dans une ville importante dirigée par un aubergiste sympathique nommé Allison. Nous achetons et vendons également uniquement les meilleurs produits. Malheureusement, nos produits se dégradent constamment en termes de qualité à l'approche de leur date de péremption. Nous avons un système en place qui met à jour notre inventaire pour nous. Il a été développé par un type sans prétention nommé Leeroy, qui a évolué vers de nouvelles aventures. Votre tâche consiste à ajouter une nouvelle fonctionnalité à notre système afin que nous puissions commencer à vendre une nouvelle catégorie d’articles. Tout d'abord une introduction à notre système:
+Bienvenue à Gilded Rose, une petite auberge dans un emplacement privilégié dans une ville importante dirigée par un aubergiste sympathique nommé Romain. Nous achetons et vendons également uniquement les meilleurs produits. Malheureusement, nos produits se dégradent constamment en termes de qualité à l'approche de leur date de péremption. Nous avons un système en place qui met à jour notre inventaire pour nous. Il a été développé par un type sans prétention nommé Leeroy, qui a évolué vers de nouvelles aventures. Votre tâche consiste à ajouter une nouvelle fonctionnalité à notre système afin que nous puissions commencer à vendre une nouvelle catégorie d’articles. Tout d'abord une introduction à notre système:
  - Tous les articles ont une valeur *SellIn* qui indique le nombre de jours pendant lesquels nous devons vendre l'article
  - Tous les articles ont une valeur *Quality* qui indique la valeur de l'article
  - À la fin de chaque journée, notre système décrémente les deux valeurs pour chaque article
@@ -36,13 +37,22 @@ La réalisation de cet exercice se fera en 3 étapes:
 
 ## Conseils
 N'hésitez pas à apporter des modifications à la méthode *UpdateQuality*  et à changer complètement le code tant que tout fonctionne correctement. Cependant, **ne modifiez pas** la classe *Item* ni la signature du constructeur de *GuildedRose* (*Item[] items*), car celles-ci appartiennent au gobelin situé dans le coin qui passera immédiatement en mode berserk et vous assommera, ou pire...
-
 Cela ne vous empêche pas d'avoir votre propre représentation des objets à manipuler.
 Vous trouverez une classe *ItemFactory* (à implémenter) prenant en paramètre un *Item* et retournant un objet *AbstractItem* (à implémenter également) qui sera à étendre par vos objets.
 
 Utiliser **EclEmma** pour vérifier que vos tests couvrent tout le code.
 
-Attention, ne pas oublier le comportement par default lorsque le nom de l'objet ne correspond pas à l'un des 4 cités.
+**Attention**, ne pas oublier le comportement par default lorsque le nom de l'objet ne correspond pas à l'un des 4 cités.
+
+**Attention**, dans l'implementation de base, les items passés en paramètre de GuildedRose sont modifiés directement par référence. Dans le cas où vous stockez dans GuildedRose une liste de *AbstractItem* il ne faut pas oublier le mettre à jour l'objet *Item* initial.
+Par exemple si je réalise le code de test suivant:
+
+> Item[] items = new Item[] { new Item("foo", 1, 1) };
+> GildedRose app = new GildedRose(items);
+> app.updateQuality();
+
+Alors items[0].quality et items[0].sellIn doivent valoir 0.
+
 
 Clarification: un article ne peut jamais avoir sa qualité supérieure à 50, cependant *Sulfuras* est un objet légendaire et sa qualité est de 80 et ne change jamais.
 
