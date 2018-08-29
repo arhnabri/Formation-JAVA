@@ -25,13 +25,15 @@ import com.gildedrose.solution.rdu.items.ItemFactory;
 // ****************************************************************************
 
 class GildedRose {
-    List<AbstractItem> items;
+    List<AbstractItem> itemsList;
+    Item[] items;
 
     public GildedRose(final Item[] items) {
-        this.items = Arrays.asList(items).stream().map(ItemFactory::create).collect(Collectors.toList());
+        this.items = items;
+        this.itemsList = Arrays.asList(items).stream().map(ItemFactory::create).collect(Collectors.toList());
     }
 
     public void updateQuality() {
-        this.items.forEach(AbstractItem::updateOneItem);
+        this.itemsList.forEach(AbstractItem::updateOneItem);
     }
 }
