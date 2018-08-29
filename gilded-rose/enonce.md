@@ -1,12 +1,12 @@
 
-# Exercice de refactoring: Guilded Rose
+# Exercice de refactoring: Gilded Rose
 L'idée de cet exercice est de:
  - réaliser des **tests unitaires** couvrant la totalité d'un code existant
  - **refactorer** le code en utilisant la **POO**
  - ajouter une **nouvelle fonctionnalité** 
 
 # Projet
-Le code source à refactorer est fourni dans les classes **GuildedRose** et **Item**.
+Le code source à refactorer est fourni dans les classes **GildedRose** et **Item**.
 La classe de test à compléter est dans la classe **GildedRoseFixmeTest**.
 
 # Explication
@@ -36,7 +36,7 @@ La réalisation de cet exercice se fera en 3 étapes:
  - L'ajout d'un nouvel objet *Conjured*
 
 ## Conseils
-N'hésitez pas à apporter des modifications à la méthode *UpdateQuality*  et à changer complètement le code tant que tout fonctionne correctement. Cependant, **ne modifiez pas** la classe *Item* ni la signature du constructeur de *GuildedRose* (*Item[] items*), car celles-ci appartiennent au gobelin situé dans le coin qui passera immédiatement en mode berserk et vous assommera, ou pire...
+N'hésitez pas à apporter des modifications à la méthode *UpdateQuality*  et à changer complètement le code tant que tout fonctionne correctement. Cependant, **ne modifiez pas** la classe *Item* ni la signature du constructeur de *GildedRose* (*Item[] items*), car celles-ci appartiennent au gobelin situé dans le coin qui passera immédiatement en mode berserk et vous assommera, ou pire...
 Cela ne vous empêche pas d'avoir votre propre représentation des objets à manipuler.
 Vous trouverez une classe *ItemFactory* (à implémenter) prenant en paramètre un *Item* et retournant un objet *AbstractItem* (à implémenter également) qui sera à étendre par vos objets.
 
@@ -44,7 +44,7 @@ Utiliser **EclEmma** pour vérifier que vos tests couvrent tout le code.
 
 **Attention**, ne pas oublier le comportement par default lorsque le nom de l'objet ne correspond pas à l'un des 4 cités.
 
-**Attention**, dans l'implementation de base, les items passés en paramètre de GuildedRose sont modifiés directement par référence. Dans le cas où vous stockez dans GuildedRose une liste de *AbstractItem* il ne faut pas oublier le mettre à jour l'objet *Item* initial.
+**Attention**, dans l'implementation de base, les items passés en paramètre de GildedRose sont modifiés directement par référence. Dans le cas où vous stockez dans GildedRose une liste de *AbstractItem* il ne faut pas oublier le mettre à jour l'objet *Item* initial.
 Par exemple si je réalise le code de test suivant:
 
 > Item[] items = new Item[] { new Item("foo", 1, 1) };

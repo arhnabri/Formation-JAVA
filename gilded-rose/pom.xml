@@ -7,8 +7,8 @@
 		<artifactId>formation</artifactId>
 		<version>1.0.0-SNAPSHOT</version>
 	</parent>
-	<artifactId>guilded-rose</artifactId>
-	<name>Guilded Rose Kata</name>
+	<artifactId>gilded-rose</artifactId>
+	<name>Gilded Rose Kata</name>
 
 	<dependencies>
 		<dependency>

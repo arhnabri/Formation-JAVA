@@ -1,331 +1,474 @@
 <html>
 <header id="header">
-    <div style="display: table; width:100%;">
-        <div id="logo" style="float:left">
-            <a href="https://portail.aubay.com/"><img class="ie_png" src="https://portail.aubay.com/wp-content/uploads/2010/12/MyAubay.png" alt="My Aubay"></a>
-        </div>
-        <div style="float:left;width: 85%;text-align:center;display: table-cell;vertical-align: middle;margin-top: 45px;font-size: 30px;"> <b>Enoncé des exercices de la formation JAVA</b>
-    </div>
+	<div style="display: table; width: 100%;">
+		<div id="logo" style="float: left">
+			<a href="https://portail.aubay.com/"><img class="ie_png"
+				src="https://portail.aubay.com/wp-content/uploads/2010/12/MyAubay.png"
+				alt="My Aubay"></a>
+		</div>
+		<div
+			style="float: left; width: 85%; text-align: center; display: table-cell; vertical-align: middle; margin-top: 45px; font-size: 30px;">
+			<b>Enoncé des exercices de la formation JAVA</b>
+		</div>
 </header>
 
 <body>
-    <ul>
-        <li style="font-size: 40px;">  <b>Thème 1 : La programation objet ‒ Exercice : La calculatrice</b>
-<div style="font-size: 20px;">
-<h1 id="exercicesurlaprogrammationobjet">Exercice sur la programmation objet</h1>
+	<ul>
+		<li style="font-size: 40px;"><b>Thème 1 : La programation
+				objet ‒ Exercice : La calculatrice</b>
+			<div style="font-size: 20px;">
+				<h1 id="exercicesurlaprogrammationobjet">Exercice sur la
+					programmation objet</h1>
+
+				<p>L'idée de cet exercice est de réaliser une calculatrice
+					capable de faire les opérations suivantes :</p>
+
+				<ul>
+					<li>Addition</li>
+
+					<li>Soustraction</li>
+
+					<li>Division</li>
+
+					<li>Multiplication</li>
+				</ul>
+
+				<h1 id="projet">Projet</h1>
+
+				<p>Le squelette du projet est fourni vous devez compléter les
+					différentes classes. Il peut être nécessaire d'en créer de
+					nouvelles. Vous devez conserver la structure du projet !</p>
+
+				<h2 id="explication">Explication</h2>
+
+				<p>
+					Nous allons réaliser des cacluls à partir d'une chaine de
+					caractères donnée en entrée du programme.<br>
+					A chaque nouvel opérateur
+					il faut réaliser une nouvelle opération, à la manière d'une
+					calculatrice simple.<br>
+					Il ne faut donc pas gérer la priorité des
+					opérateurs <em>*</em> et <em>/</em>.<br>
+				</p>
+				Par exemple :
+				<ol>
+					<li>pour la chaine "12/2" donnée en entrée le résultat sera 6.</li>
+
+					<li>pour la chaine "12/6+42*2+12/10" le résultat sera 10 (et
+						non pas 87.2 avec la gestion de la priorité des opérations)</li>
+				</ol>
+
+				<h2 id="casderreur">Cas d'erreur</h2>
+
+				<p>Si l'opération en entrée est incorrecte il faudra renvoyer
+					une erreur de type UnsupportedOperationException contenant le
+					message "operation non valide". Voici des exemples de chaines en
+					erreur :</p>
 
-<p>L'idée de cet exercice est de réaliser une calculatrice capable de faire les opérations suivantes :</p>
+				<ol>
+					<li>abcd+12</li>
+
+					<li>abcd</li>
 
-<ul>
-<li>Addition</li>
+					<li>12</li>
+				</ol>
 
-<li>Soustraction</li>
+				<h2 id="testunitaire">Test unitaire</h2>
 
-<li>Division</li>
+				<p>
+					Le fichier TestLauncher permet de tester votre code. <strong>Il
+						ne doit pas être modifié !</strong> Pour lancer les tests faites un clic
+					droit sur le fichier > run as > junit test. Vous pouvez également
+					lancer les tests avec la commande "mvn test" si vous préférez
+					utiliser Maven.
+				</p>
+
+				<h2 id="conseil">Conseil</h2>
 
-<li>Multiplication</li>
-</ul>
+				<p>
+					Il est deja fourni une classe abstraite <em>Operation</em> ainsi
+					qu'une classe <em>Calculatrice</em> (à implémenter) qui servira à
+					effectuer des opérations à partir de la chaîne de charactères
+					fournie.
+				</p>
+
+				<p>
+					Un certain nombre de méthodes sont déjà présentes dans la classe <strong>OperationEnum</strong>.
+					N'hésitez pas à les utiliser si vous en avez besoin.
+				</p>
+
+				<p>
+					<strong>BON COURAGE :)</strong>
+				</p>
+			</div></li>
+		<li style="font-size: 40px;"><b>Thème 2 : Le ramasse-miettes
+				‒ Exercice : La fuite mémoire</b>
+			<div style="font-size: 20px;">
+				<h1 id="exercicesurlesfuitesmmoires">Exercice sur les fuites
+					mémoires</h1>
+
+				<p>L'idée de cet exercice est de comprendre et de corriger le
+					test unitaire qui fait un OutOfMemoryError.</p>
+
+				<h1 id="projet">Projet</h1>
+
+				<p>
+					Le squelette du projet est fourni : vous devez créer la méthode <strong>testSansErreur</strong>
+					!
+				</p>
 
-<h1 id="projet">Projet</h1>
+				<h2 id="explication">Explication</h2>
 
-<p>Le squelette du projet est fourni vous devez compléter les différentes classes. Il peut être nécessaire d'en créer de nouvelles.
-Vous devez conserver la structure du projet !</p>
+				<p>
+					Dans le fichier TestLauncher.java vous trouverez la méthode <strong>testThrowOutOfMemory</strong>.
+					Si vous lancez le test vous verrez qu'il produit une erreur. Il
+					faut retoucher le code pour ne plus avoir cette erreur. Pour lancer
+					les tests faites la commande <strong>mvn test</strong>.
+				</p>
 
-<h2 id="explication">Explication</h2>
+				<h2 id="conseil">Conseil</h2>
 
-<p>Nous allons réaliser à partir d'une chaine de caractères donnée en entrée du programme un calcul.
-Par exemple :</p>
+				<p>L'idée n'est pas de changer l'option XMX présente dans le pom
+					mais plutôt de chercher quels sont les objets qui peuvent rester en
+					mémoire.</p>
 
-<ol>
-<li>pour la chaine "12/2" donnée en entrée le résultat sera 6.</li>
+				<p>
+					<strong>BON COURAGE :)</strong>
+				</p>
+			</div>
+		<li style="font-size: 40px;"><b>Thème 3 : Introduction à java
+				7 ‒ Exercice : Développons en Java 7</b>
+			<div style="font-size: 20px;">
+				<h1 id="exercicesurjava7">Exercice sur Java 7</h1>
 
-<li>pour la chaine "12/6+42*2+12/10" le résultat sera 10.</li>
-</ol>
+				<p>L'idée de cet exercice est la classe à l'aide du scénario
+					fournit.</p>
 
-<h2 id="casderreur">Cas d'erreur</h2>
+				<h1 id="projet">Projet</h1>
 
-<p>Si l'opération en entrée est incorrecte il faudra renvoyer une erreur de type UnsupportedOperationException contenant le message "operation non valide".
-Voici des exemples de chaines en erreur : </p>
+				<p>Vous devez juste compléter la classe TestLauncher !</p>
 
-<ol>
-<li>abcd+12</li>
+				<h2 id="explication">Explication</h2>
 
-<li>abcd</li>
+				<p>Dans le répertoire src/main/resources vous allez retrouver un
+					fichier exemple.xlsx. En premier, vous devez utiliser la classe
+					Path afin de charger le fichier. Puis vous devez lire le fichier à
+					l'aide de Poi. Pour cela ouvrez le fichier avec POI puis utilisez
+					les iterators pour lire le fichier :</p>
 
-<li>12</li>
-</ol>
+				<ul>
+					<li>workbook.sheetIterator() lit les pages</li>
 
-<h2 id="testunitaire">Test unitaire</h2>
+					<li>sheet.rowIterator() lit une ligne</li>
 
-<p>Le fichier TestLauncher permet de tester votre code. 
-<strong>Il ne doit pas être modifié !</strong> 
-Pour lancer les tests faites un clic droit sur le fichier > run as > junit test.
-Vous pouvez également lancer les tests avec la commande "mvn test" si vous préférez utiliser Maven.</p>
+					<li>row.cellIterator() lit les cellules.</li>
+				</ul>
 
-<h2 id="conseil">Conseil</h2>
+				<p>Vous devez ensuite à partir d'une ligne du fichier excel
+					créer une Personne. Dans la première colonne du fichier excel les
+					valeurs possibles sont :</p>
 
-<p>Un certain nombre de méthodes sont déjà présentes dans la classe <strong>OperationEnum</strong>. N'hésitez pas à les utiliser si vous en avez besoin.</p>
+				<ul>
+					<li>"H" il faut créer un objet de type Homme</li>
 
-<p><strong>BON COURAGE :)</strong></p>
-</div>
-</li>
-<li style="font-size: 40px;">  <b>Thème 2 : Le ramasse-miettes ‒ Exercice : La fuite mémoire</b>
-<div style="font-size: 20px;">
-<h1 id="exercicesurlesfuitesmmoires">Exercice sur les fuites mémoires</h1>
+					<li>"F" il faut créer un objet de type Femme</li>
+				</ul>
 
-<p>L'idée de cet exercice est de comprendre et de corriger le test unitaire qui fait un OutOfMemoryError.</p>
+				<p>
+					La dernière colonne est une date. Pour la mettre au bon format il
+					faut utiliser la méthode <strong>convertDate</strong> présente dans
+					la classe Personne. Puis enfin vous devez parcourir la liste de
+					personne et imprimer à l'aide de la méthode <strong>toString</strong>
+					le résultat.
+				</p>
 
-<h1 id="projet">Projet</h1>
+				<h2 id="conseil">Conseil</h2>
 
-<p>Le squelette du projet est fourni : vous devez créer la méthode <strong>testSansErreur</strong> !</p>
+				<p>
+					Pour lire le fichier vous devez utiliser <strong>new
+						XSSFWorkbook(is)</strong> qui prend en paramètre un InputStream. Pour lire
+					une date en POI vous pouvez utilisez l'instruction suivante : if
+					(HSSFDateUtil.isCellDateFormatted(cell)) { cell.getDateCellValue();
+					}
+				</p>
 
-<h2 id="explication">Explication</h2>
+				<p>
+					<strong>BON COURAGE :)</strong>
+				</p>
+			</div></li>
 
-<p>Dans le fichier TestLauncher.java vous trouverez la méthode <strong>testThrowOutOfMemory</strong>.
-Si vous lancez le test vous verrez qu'il produit une erreur.
-Il faut retoucher le code pour ne plus avoir cette erreur.
-Pour lancer les tests faites la commande <strong>mvn test</strong>.</p>
+		<li style="font-size: 40px;"><b>Thème 4 : La programation
+				fonctionnelle ‒ Exercice : Introduction</b>
+			<div style="font-size: 20px;">
+				<h1 id="exercicesurlaprogrammationfonctionnelle">Exercice sur
+					la programmation fonctionnelle</h1>
 
-<h2 id="conseil">Conseil</h2>
+				<p>L'idée de cet exercice est de transformer un code sans
+					programmation fonctionnelle en Java 8.</p>
 
-<p>L'idée n'est pas de changer l'option XMX présente dans le pom mais plutôt de chercher quels sont les objets qui peuvent rester en mémoire.</p>
+				<h1 id="projet">Projet</h1>
 
-<p><strong>BON COURAGE :)</strong></p>
-</div>
+				<p>Le squelette du projet est fourni vous devez modifier au
+					besoin les différentes classes. Il n'est pas nécessaire d'en créer
+					de nouvelles. Vous devez conserver la structure du projet !</p>
 
- <li style="font-size: 40px;">  <b>Thème 3 : Introduction à java 7 ‒ Exercice : Développons en Java 7</b>
-<div style="font-size: 20px;">
-<h1 id="exercicesurjava7">Exercice sur Java 7</h1>
+				<h2 id="explication">Explication</h2>
 
-<p>L'idée de cet exercice est la classe à l'aide du scénario fournit.</p>
+				<p>Dans le fichier TestLauncher.java vous trouverez le code que
+					l'on souhaite transformer en Java 8. Les instructions sont
+					indiquées en commentaire dans la classe : Exemple :</p>
 
-<h1 id="projet">Projet</h1>
+				<ul>
+					<li>// Tri par salaires croissants</li>
 
-<p>Vous devez juste compléter la classe TestLauncher !</p>
+					<li>// Tri par salaires decroissants</li>
+				</ul>
 
-<h2 id="explication">Explication</h2>
+				<h2 id="conseil">Conseil</h2>
 
-<p>Dans le répertoire src/main/resources vous allez retrouver un fichier exemple.xlsx.
-En premier, vous devez utiliser la classe Path afin de charger le fichier.
-Puis vous devez lire le fichier à l'aide de Poi.
-Pour cela ouvrez le fichier avec POI puis utilisez les iterators pour lire le fichier : </p>
+				<p>La classe Entreprise contient un iterator ... Ne devrait-on
+					pas avoir un stream ? Les classes de Comparator sont-elles vraiment
+					utiles ?</p>
 
-<ul>
-<li>workbook.sheetIterator() lit les pages</li>
+				<p>
+					<strong>BON COURAGE :)</strong>
+				</p>
+			</div></li>
 
-<li>sheet.rowIterator() lit une ligne</li>
+		<li style="font-size: 40px;"><b>Thème 4 : La programation
+				java 8 ‒ Exercice : Les interfaces</b>
+			<div style="font-size: 20px;">
+				<h1 id="exercicesurlesinterfacesjava">Exercice sur les
+					interfaces Java</h1>
 
-<li>row.cellIterator() lit les cellules.</li>
-</ul>
+				<p>
+					L'idée de cet exercice est de d'implémenter la méthode <strong>description</strong>
+					afin de respecter le test unitaire contenu dans la classe
+					TestLauncher .
+				</p>
 
-<p>Vous devez ensuite à partir d'une ligne du fichier excel créer une Personne.
-Dans la première colonne du fichier excel les valeurs possibles sont :</p>
+				<h1 id="projet">Projet</h1>
 
-<ul>
-<li>"H" il faut créer un objet de type Homme</li>
+				<p>Vous ne devez modifier que les 3 interfaces fournies :</p>
 
-<li>"F" il faut créer un objet de type Femme</li>
-</ul>
+				<ul>
+					<li>IFemme</li>
 
-<p>La dernière colonne est une date. Pour la mettre au bon format il faut utiliser la méthode <strong>convertDate</strong> présente dans la classe Personne.
-Puis enfin vous devez parcourir la liste de personne et imprimer à l'aide de la méthode <strong>toString</strong> le résultat.</p>
+					<li>IHomme</li>
 
-<h2 id="conseil">Conseil</h2>
+					<li>IHumain</li>
+				</ul>
 
-<p>Pour lire le fichier vous devez utiliser <strong>new XSSFWorkbook(is)</strong> qui prend en paramètre un InputStream.
-Pour lire une date en POI vous pouvez utilisez l'instruction suivante : 
-if (HSSFDateUtil.isCellDateFormatted(cell)) {
-    cell.getDateCellValue();
-}</p>
+				<h2 id="explication">Explication</h2>
 
-<p><strong>BON COURAGE :)</strong></p>
-</div>
-</li>
+				<p>Dans le fichier TestLauncher.java vous trouverez le code que
+					l'on souhaite obtenir.</p>
 
-        <li style="font-size: 40px;">  <b>Thème 4 : La programation fonctionnelle ‒ Exercice : Introduction</b>
-<div style="font-size: 20px;">
-<h1 id="exercicesurlaprogrammationfonctionnelle">Exercice sur la programmation fonctionnelle</h1>
+				<p>
+					<strong>BON COURAGE :)</strong>
+				</p>
+			</div></li>
 
-<p>L'idée de cet exercice est de transformer un code sans programmation fonctionnelle en Java 8.</p>
+		<li style="font-size: 40px;"><b>Thème 4 : La programation
+				java 8 ‒ Exercice : Les dates</b>
+			<div style="font-size: 20px;">
+				<h1 id="exercicesurlesdates">Exercice sur les dates</h1>
 
-<h1 id="projet">Projet</h1>
+				<p>L'idée de cet exercice est de compléter les demandes faites
+					dans la classe TestLauncher.</p>
 
-<p>Le squelette du projet est fourni vous devez modifier au besoin les différentes classes. Il n'est pas nécessaire d'en créer de nouvelles.
-Vous devez conserver la structure du projet !</p>
+				<h1 id="projet">Projet</h1>
 
-<h2 id="explication">Explication</h2>
+				<p>Vous devez juste compléter la classe TestLauncher !</p>
 
-<p>Dans le fichier TestLauncher.java vous trouverez le code que l'on souhaite transformer en Java 8.
-Les instructions sont indiquées en commentaire dans la classe : 
-Exemple : </p>
+				<h2 id="explication">Explication</h2>
 
-<ul>
-<li>// Tri par salaires croissants</li>
+				<p>Dans le fichier TestLauncher.java vous trouverez le code que
+					l'on souhaite réaliser. Les instructions sont indiquées en
+					commentaire dans la classe : Exemple :</p>
 
-<li>// Tri par salaires decroissants</li>
-</ul>
+				<ul>
+					<li>// afficher la date du 27/08/2018 sous ce format.</li>
 
-<h2 id="conseil">Conseil</h2>
+					<li>// trouver le premier jour du mois d'aout 2018</li>
+				</ul>
 
-<p>La classe Entreprise contient un iterator ... Ne devrait-on pas avoir un stream ?
-Les classes de Comparator sont-elles vraiment utiles ?</p>
+				<h2 id="conseil">Conseil</h2>
 
-<p><strong>BON COURAGE :)</strong></p>
-</div>
-</li>
+				<p>On ne doit utiliser que la nouvelle API Date !</p>
 
-<li style="font-size: 40px;">  <b>Thème 4 : La programation java 8 ‒ Exercice : Les interfaces</b>
-<div style="font-size: 20px;">
-<h1 id="exercicesurlesinterfacesjava">Exercice sur les interfaces Java</h1>
+				<p>
+					<strong>BON COURAGE :)</strong>
+				</p>
+			</div></li>
 
-<p>L'idée de cet exercice est de d'implémenter la méthode <strong>description</strong> afin de respecter le test unitaire contenu dans la classe TestLauncher .</p>
+		<li style="font-size: 40px;"><b>Thème 5 : Les bonnes
+				pratiques ‒ Exercice : Refactoring - Gilded Rose</b>
+			<div style="font-size: 20px;">
 
-<h1 id="projet">Projet</h1>
+				<h1 id="exercicederefactoringgildedrose">Exercice de
+					refactoring: Gilded Rose</h1>
 
-<p>Vous ne devez modifier que les 3 interfaces fournies :</p>
+				<p>L'idée de cet exercice est de:</p>
 
-<ul>
-<li>IFemme</li>
+				<ul>
+					<li>réaliser des <strong>tests unitaires</strong> couvrant la
+						totalité d'un code existant
+					</li>
 
-<li>IHomme</li>
+					<li><strong>refactorer</strong> le code en utilisant la <strong>POO</strong></li>
 
-<li>IHumain</li>
-</ul>
+					<li>ajouter une <strong>nouvelle fonctionnalité</strong>
+					</li>
+				</ul>
 
-<h2 id="explication">Explication</h2>
+				<h1 id="projet">Projet</h1>
 
-<p>Dans le fichier TestLauncher.java vous trouverez le code que l'on souhaite obtenir.</p>
+				<p>
+					Le code source à refactorer est fourni dans les classes <strong>GildedRose</strong>
+					et <strong>Item</strong>. La classe de test à compléter est dans la
+					classe <strong>GildedRoseFixmeTest</strong>.
+				</p>
 
-<p><strong>BON COURAGE :)</strong></p>
-</div>
-</li>
+				<h1 id="explication">Explication</h1>
 
-<li style="font-size: 40px;">  <b>Thème 4 : La programation java 8 ‒ Exercice : Les dates</b>
-<div style="font-size: 20px;">
-<h1 id="exercicesurlesdates">Exercice sur les dates</h1>
+				<p>Bienvenue à Gilded Rose, une petite auberge dans un
+					emplacement privilégié dans une ville importante dirigée par un
+					aubergiste sympathique nommé Romain. Nous achetons et vendons
+					également uniquement les meilleurs produits. Malheureusement, nos
+					produits se dégradent constamment en termes de qualité à l'approche
+					de leur date de péremption. Nous avons un système en place qui met
+					à jour notre inventaire pour nous. Il a été développé par un type
+					sans prétention nommé Leeroy, qui a évolué vers de nouvelles
+					aventures. Votre tâche consiste à ajouter une nouvelle
+					fonctionnalité à notre système afin que nous puissions commencer à
+					vendre une nouvelle catégorie d’articles. Tout d'abord une
+					introduction à notre système:</p>
 
-<p>L'idée de cet exercice est de compléter les demandes faites dans la classe TestLauncher.</p>
+				<ul>
+					<li>Tous les articles ont une valeur <em>SellIn</em> qui
+						indique le nombre de jours pendant lesquels nous devons vendre
+						l'article
+					</li>
 
-<h1 id="projet">Projet</h1>
+					<li>Tous les articles ont une valeur <em>Quality</em> qui
+						indique la valeur de l'article
+					</li>
 
-<p>Vous devez juste compléter la classe TestLauncher !</p>
+					<li>À la fin de chaque journée, notre système décrémente les
+						deux valeurs pour chaque article</li>
+				</ul>
 
-<h2 id="explication">Explication</h2>
+				<p>Assez simple, non ? Eh bien, c'est là que ça devient
+					intéressant:</p>
 
-<p>Dans le fichier TestLauncher.java vous trouverez le code que l'on souhaite réaliser.
-Les instructions sont indiquées en commentaire dans la classe : 
-Exemple : </p>
+				<ul>
+					<li>Une fois la date de péremption écoulée, la qualité se
+						dégrade deux fois plus vite</li>
 
-<ul>
-<li>// afficher la date du 27/08/2018 sous ce format.</li>
+					<li>La <em>Quality</em> d'un objet n'est jamais négative
+					</li>
 
-<li>// trouver le premier jour du mois d'aout 2018</li>
-</ul>
+					<li>Plus <em>AgedBrie</em> vieillit plus il augmente en
+						qualité
+					</li>
 
-<h2 id="conseil">Conseil</h2>
+					<li>La <em>Quality</em> d'un objet n'est jamais supérieure à
+						50
+					</li>
 
-<p>On ne doit utiliser que la nouvelle API Date !</p>
+					<li><em>Sulfuras</em>, étant un objet légendaire, ne doit
+						jamais être vendu ou diminuer en qualité</li>
 
-<p><strong>BON COURAGE :)</strong></p>
-</div>
-</li>
+					<li><em>Backstage Pass</em>, comme <em>AgedBrie</em>, augmente
+						la <em>Quality</em> à mesure que sa valeur <em>SellIn</em>
+						approche: la qualité augmente de 2 quand il y a 10 jours ou moins
+						et de 3 quand il y a 5 jours ou moins mais la qualité tombe à 0
+						après le concert</li>
+				</ul>
 
-<li style="font-size: 40px;">  <b>Thème 5 : Les bonnes pratiques ‒ Exercice : Refactoring - Guilded Rose</b>
-<div style="font-size: 20px;">
+				<h2 id="objectif">Objectif</h2>
 
-<h1 id="exercicederefactoringguildedrose">Exercice de refactoring: Guilded Rose</h1>
+				<p>
+					Nous avons récemment signé un fournisseur d'articles <em>Conjured</em>.
+					Cela nécessite une mise à jour de notre système:
+				</p>
 
-<p>L'idée de cet exercice est de:</p>
+				<ul>
+					<li>Les éléments <em>Conjured</em> se dégradent en qualité
+						deux fois plus vite que les objets normaux
+					</li>
+				</ul>
 
-<ul>
-<li>réaliser des <strong>tests unitaires</strong> couvrant la totalité d'un code existant</li>
+				<h2 id="rgles">Règles</h2>
 
-<li><strong>refactorer</strong> le code en utilisant la <strong>POO</strong></li>
+				<p>La réalisation de cet exercice se fera en 3 étapes:</p>
 
-<li>ajouter une <strong>nouvelle fonctionnalité</strong> </li>
-</ul>
+				<ul>
+					<li>Ecriture des tests unitaires</li>
 
-<h1 id="projet">Projet</h1>
+					<li>Refactoring du code en POO dans l'optique de rajouter
+						simplement un nouvel objet</li>
 
-<p>Le code source à refactorer est fourni dans les classes <strong>GuildedRose</strong> et <strong>Item</strong>.
-La classe de test à compléter est dans la classe <strong>GildedRoseFixmeTest</strong>.</p>
+					<li>L'ajout d'un nouvel objet <em>Conjured</em></li>
+				</ul>
 
-<h1 id="explication">Explication</h1>
+				<h2 id="conseils">Conseils</h2>
 
-<p>Bienvenue à Gilded Rose, une petite auberge dans un emplacement privilégié dans une ville importante dirigée par un aubergiste sympathique nommé Romain. Nous achetons et vendons également uniquement les meilleurs produits. Malheureusement, nos produits se dégradent constamment en termes de qualité à l'approche de leur date de péremption. Nous avons un système en place qui met à jour notre inventaire pour nous. Il a été développé par un type sans prétention nommé Leeroy, qui a évolué vers de nouvelles aventures. Votre tâche consiste à ajouter une nouvelle fonctionnalité à notre système afin que nous puissions commencer à vendre une nouvelle catégorie d’articles. Tout d'abord une introduction à notre système:</p>
+				<p>
+					N'hésitez pas à apporter des modifications à la méthode <em>UpdateQuality</em>
+					et à changer complètement le code tant que tout fonctionne
+					correctement. Cependant, <strong>ne modifiez pas</strong> la classe
+					<em>Item</em> ni la signature du constructeur de <em>GildedRose</em>
+					(<em>Item[] items</em>), car celles-ci appartiennent au gobelin
+					situé dans le coin qui passera immédiatement en mode berserk et
+					vous assommera, ou pire...<br> Cela ne vous empêche pas
+					d'avoir votre propre représentation des objets à manipuler. Vous
+					trouverez une classe <em>ItemFactory</em> (à implémenter) prenant
+					en paramètre un <em>Item</em> et retournant un objet <em>AbstractItem</em>
+					(à implémenter également) qui sera à étendre par vos objets.
+				</p>
 
-<ul>
-<li>Tous les articles ont une valeur <em>SellIn</em> qui indique le nombre de jours pendant lesquels nous devons vendre l'article</li>
+				<p>
+					Utiliser <strong>EclEmma</strong> pour vérifier que vos tests
+					couvrent tout le code.
+				</p>
 
-<li>Tous les articles ont une valeur <em>Quality</em> qui indique la valeur de l'article</li>
+				<p>
+					<strong>Attention</strong>, ne pas oublier le comportement par
+					default lorsque le nom de l'objet ne correspond pas à l'un des 4
+					cités.
+				</p>
 
-<li>À la fin de chaque journée, notre système décrémente les deux valeurs pour chaque article</li>
-</ul>
+				<p>
+					<strong>Attention</strong>, dans l'implementation de base, les
+					items passés en paramètre de GildedRose sont modifiés directement
+					par référence. Dans le cas où vous stockez dans GildedRose une
+					liste de <em>AbstractItem</em> il ne faut pas oublier le mettre à
+					jour l'objet <em>Item</em> initial. Par exemple si je réalise le
+					code de test suivant:
+				</p>
 
-<p>Assez simple, non ? Eh bien, c'est là que ça devient intéressant:</p>
+				<blockquote>
+					Item[] items = new Item[] { new Item("foo", 1, 1) };<br>
+					GildedRose app = new GildedRose(items);<br>
+					app.updateQuality();<br>
+				</blockquote>
 
-<ul>
-<li>Une fois la date de péremption écoulée, la qualité se dégrade deux fois plus vite</li>
+				<p>Alors items[0].quality et items[0].sellIn doivent valoir 0.</p>
 
-<li>La <em>Quality</em> d'un objet n'est jamais négative</li>
+				<p>
+					Clarification: un article ne peut jamais avoir sa qualité
+					supérieure à 50, cependant <em>Sulfuras</em> est un objet
+					légendaire et sa qualité est de 80 et ne change jamais.
+				</p>
 
-<li>Plus <em>AgedBrie</em> vieillit plus il augmente en qualité</li>
+				<p>
+					<strong>BON COURAGE :)</strong>
+				</p>
+			</div></li>
 
-<li>La <em>Quality</em> d'un objet n'est jamais supérieure à 50</li>
-
-<li><em>Sulfuras</em>, étant un objet légendaire, ne doit jamais être vendu ou diminuer en qualité</li>
-
-<li><em>Backstage Pass</em>, comme <em>AgedBrie</em>, augmente la <em>Quality</em> à mesure que sa valeur <em>SellIn</em> approche: la qualité augmente de 2 quand il y a 10 jours ou moins et de 3 quand il y a 5 jours ou moins mais la qualité tombe à 0 après le concert</li>
-</ul>
-
-<h2 id="objectif">Objectif</h2>
-
-<p>Nous avons récemment signé un fournisseur d'articles <em>Conjured</em>. Cela nécessite une mise à jour de notre système:</p>
-
-<ul>
-<li>Les éléments <em>Conjured</em> se dégradent en qualité deux fois plus vite que les objets normaux</li>
-</ul>
-
-<h2 id="rgles">Règles</h2>
-
-<p>La réalisation de cet exercice se fera en 3 étapes:</p>
-
-<ul>
-<li>Ecriture des tests unitaires</li>
-
-<li>Refactoring du code en POO dans l'optique de rajouter simplement un nouvel objet</li>
-
-<li>L'ajout d'un nouvel objet <em>Conjured</em></li>
-</ul>
-
-<h2 id="conseils">Conseils</h2>
-
-<p>N'hésitez pas à apporter des modifications à la méthode <em>UpdateQuality</em>  et à changer complètement le code tant que tout fonctionne correctement. Cependant, <strong>ne modifiez pas</strong> la classe <em>Item</em> ni la signature du constructeur de <em>GuildedRose</em> (<em>Item[] items</em>), car celles-ci appartiennent au gobelin situé dans le coin qui passera immédiatement en mode berserk et vous assommera, ou pire...<br>
-Cela ne vous empêche pas d'avoir votre propre représentation des objets à manipuler.
-Vous trouverez une classe <em>ItemFactory</em> (à implémenter) prenant en paramètre un <em>Item</em> et retournant un objet <em>AbstractItem</em> (à implémenter également) qui sera à étendre par vos objets.</p>
-
-<p>Utiliser <strong>EclEmma</strong> pour vérifier que vos tests couvrent tout le code.</p>
-
-<p><strong>Attention</strong>, ne pas oublier le comportement par default lorsque le nom de l'objet ne correspond pas à l'un des 4 cités.</p>
-
-<p><strong>Attention</strong>, dans l'implementation de base, les items passés en paramètre de GuildedRose sont modifiés directement par référence. Dans le cas où vous stockez dans GuildedRose une liste de <em>AbstractItem</em> il ne faut pas oublier le mettre à jour l'objet <em>Item</em> initial.
-Par exemple si je réalise le code de test suivant:</p>
-
-<blockquote>
-  Item[] items = new Item[] { new Item("foo", 1, 1) };<br>
-  GildedRose app = new GildedRose(items);<br>
-  app.updateQuality();<br>
-</blockquote>
-
-<p>Alors items[0].quality et items[0].sellIn doivent valoir 0.</p>
-
-<p>Clarification: un article ne peut jamais avoir sa qualité supérieure à 50, cependant <em>Sulfuras</em> est un objet légendaire et sa qualité est de 80 et ne change jamais.</p>
-
-<p><strong>BON COURAGE :)</strong></p>
-</div>
-</li>
-
-</ul>
+	</ul>
 </body>
 
 </html>
