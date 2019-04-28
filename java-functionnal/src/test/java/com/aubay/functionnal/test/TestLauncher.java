@@ -27,11 +27,8 @@ public class TestLauncher {
 		e1.ajouter(new Employe("Craig", "Daniel", "Agent secret", Double.valueOf(4300), 50));
 		System.out.println(e1);
 
-		// Remplit une liste avec les employés
-		final List<Employe> l = new ArrayList<>();
-		for (Employe e : e1) {
-			l.add(e);
-		}
+		// On crée une list pour utiliser nos employés
+		final List<Employe> l = e1.getEmployes();
 
 		// Tri par salaires croissants
 		CompareSalaire comparateur = new CompareSalaire();
@@ -55,7 +52,7 @@ public class TestLauncher {
 		
 		//Qui est le plus vieux
 		Integer maxAge = Integer.valueOf(0);
-		for (Employe e : e1) {
+		for (Employe e : l) {
 			if (e.getAge() > maxAge) {
 				maxAge = e.getAge();
 			}
@@ -65,7 +62,7 @@ public class TestLauncher {
 		//Salaire moyen 
 		Double salaireMoyen = Double.valueOf(0);
 		Integer nbEmploye = Integer.valueOf(0);
-		for (Employe e : e1) {
+		for (Employe e : l) {
 			salaireMoyen += e.getSalaire();
 			nbEmploye++;
 		}
@@ -73,7 +70,7 @@ public class TestLauncher {
 		
 		//Trouver les différents développeurs
 		final List<Employe> listDev = new ArrayList<>();
-		for (Employe e : e1) {
+		for (Employe e : l) {
 			if (e.getFonction().equals("Developpeur")) {
 				listDev.add(e);
 			}
@@ -83,7 +80,7 @@ public class TestLauncher {
 		
 		//Combien de James Bond sont agents secret
 		Integer nbDeveloppeur = Integer.valueOf(0);
-		for (Employe e : e1) {
+		for (Employe e : l) {
 			if (e.getFonction().equals("Agent secret")) {
 				nbDeveloppeur++;
 			}
