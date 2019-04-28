@@ -1,11 +1,12 @@
 package com.aubay.functionnal.avant;
 
 import java.util.ArrayList;
-import java.util.Iterator;
+import java.util.List;
 
-public class Entreprise implements Iterable<Employe> {
+public class Entreprise {
+	
 	private String nom;
-	private ArrayList<Employe> employes;
+	private List<Employe> employes;
 
 	public Entreprise(String nom) {
 		this.nom = nom;
@@ -15,16 +16,14 @@ public class Entreprise implements Iterable<Employe> {
 	public String getNom() {
 		return nom;
 	}
+	public final List<Employe> getEmployes() {
+		return employes;
+	}
 
-	public void ajouter(Employe emp) throws EmployeException {
+	public void ajouter(final Employe emp) throws EmployeException {
 		if (!employes.add(emp)) {
 			throw new EmployeException("Employé déjà dans cette entreprise");
 		}
-	}
-
-	@Override
-	public Iterator<Employe> iterator() {
-		return employes.iterator();
 	}
 
 	@Override
